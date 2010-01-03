@@ -24,4 +24,14 @@
         handler="collective.prettysociable.exportimport.import_various">
         <depends name="kupu" />
     </genericsetup:importStep>
+
+    <genericsetup:upgradeStep
+        title="Upgrade collective.prettysociable"
+        description="Removes wrong styles from kupu styles menu"
+        source="0.1"
+        destination="0.2"
+        handler=".migration.migrateTo02"
+        sortkey="1"
+        profile="collective.prettysociable:default"
+    />  
 </configure>

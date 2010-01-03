@@ -46,7 +46,7 @@ def import_various(context):
     paragraph_styles = list(kupu.getParagraphStyles())
 
     new_styles = [
-        ('prettySociable Link', 'prettySociable|a'),
+        ('prettySociable', 'prettySociable Link|a'),
     ]
     to_add = dict(new_styles)
 
