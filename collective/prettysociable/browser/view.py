@@ -42,7 +42,7 @@ class JavaScript(BrowserView):
         # Neccessary prettySociable JS code.
         js += """jq.prettySociable({
                     animationSpeed: '%(speed)s', /* fast/slow/normal */
-			        opacity: %(opacity)s, /* Value between 0 and 1 */
+                    opacity: %(opacity)s, /* Value between 0 and 1 */
                     share_label: 'Drag to share', /* Text displayed when a user rollover an item */
                     share_on_label: 'Share on ', /* Text displayed when a user rollover a website to share */
                     hideflash: %(hide_flash)s, /* Hides all the flash object on a page, set to TRUE if flash appears over prettySociable */
@@ -112,7 +112,7 @@ class JavaScript(BrowserView):
                             'icon': '++resource++prettySociable.tumblr.png',
                             'sizes': {'width': %(image_width)s, 'height': %(image_height)s}
                         }
-                    },
+                    }
                 });
             });
             """ % dict(
