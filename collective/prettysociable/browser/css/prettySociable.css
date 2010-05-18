@@ -129,3 +129,9 @@ html,body {
 	width:100%;
 	z-index:1005;
 }
+
+h1.documentFirstHeading a,
+a.prettySociable {
+	margin: 0;
+	padding: 0;
+}
