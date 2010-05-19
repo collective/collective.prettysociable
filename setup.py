@@ -1,11 +1,11 @@
 from setuptools import setup, find_packages
 import os
 
-version = '0.2'
+version = '0.3'
 
 setup(name='collective.prettysociable',
       version=version,
-      description="prettySociable implementation for Plone.",
+      description="prettySociable integration for Plone.",
       long_description=open("README.txt").read() + "\n" +
                        open(os.path.join("docs", "HISTORY.txt")).read(),
       # Get more strings from

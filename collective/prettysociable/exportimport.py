@@ -36,13 +36,7 @@ _PROPERTIES = [
 ]
 
 
-def import_various(context):
-    if not context.readDataFile('collective.prettysociable.txt'):
-        return
-
-    site = context.getSite()
-    kupu = getToolByName(site, 'kupu_library_tool')
-
+def configureKupu(kupu):
     paragraph_styles = list(kupu.getParagraphStyles())
 
     new_styles = [
@@ -59,6 +53,19 @@ def import_various(context):
         paragraph_styles += ['%s|%s' % (v, k) for k, v in new_styles if \
                              k in to_add]
         kupu.configure_kupu(parastyles=paragraph_styles)
+
+
+
+def import_various(context):
+    if not context.readDataFile('collective.prettysociable.txt'):
+        return
+
+    site = context.getSite()
+
+    # Skip kupu configuration on sites that don't have kupu installed
+    kupu = getToolByName(site, 'kupu_library_tool', None)
+    if kupu is not None:
+        configureKupu(kupu)
 
     # Define portal properties
     ptool = getToolByName(site, 'portal_properties')

@@ -1,7 +1,24 @@
 Changelog
 =========
 
-0.1dev (unreleased)
--------------------
+0.3 (2010-05-19)
+----------------
+
+- Plone 4 compatibility
+  [tmassman]
+- Fix for MSIE.
+  [robgietema]
+
+
+0.2 (2010-01-03)
+----------------
+
+- Fixed wrong kupu style definition
+  [tmassman]
+
+
+0.1 (2010-01-03)
+----------------
 
 - Initial release
+  [tmassman]

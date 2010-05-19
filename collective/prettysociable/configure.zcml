@@ -34,4 +34,15 @@
         sortkey="1"
         profile="collective.prettysociable:default"
     />  
+
+    <genericsetup:upgradeStep
+        title="Upgrade collective.prettysociable"
+        description="Empty upgrade step"
+        source="0.2"
+        destination="0.3"
+        handler=".migration.emptyMigrate"
+        sortkey="2"
+        profile="collective.prettysociable:default"
+    />  
+
 </configure>
