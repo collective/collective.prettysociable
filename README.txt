@@ -91,9 +91,9 @@ collective.prettysociable can be customized via property sheet (go to ZMI, porta
 
 * image_width: the width of the icon (in pixel, default: 70)
 
-* *_active: active the sharing for the service (default: True)
+* xxx_active: active the sharing for the service (default: True)
 
-* *_encode: if sharing is not working, try to turn to false (default: True)
+* xxx_encode: if sharing is not working, try to turn to false (default: True)
 
 Copyright and Credits
 =====================
