@@ -8,7 +8,7 @@
 
     <include package=".browser" />
 
-    <!-- Register the installation GenericSetup extension profile -->
+    <!-- profiles -->
     <genericsetup:registerProfile
         name="default"
         title="collective.prettysociable"
@@ -17,6 +17,16 @@
         provides="Products.GenericSetup.interfaces.EXTENSION"
     />
 
+    <genericsetup:registerProfile
+        name="uninstall"
+        title="Uninstall prettySociable"
+        directory="profiles/uninstall"
+        description="An uninstall profile for the prettySociable extension."
+        for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+        provides="Products.GenericSetup.interfaces.EXTENSION"
+    />
+
+    <!-- import steps -->
     <genericsetup:importStep
         name="collective.prettysociable"
         title="prettySociable configuration"
@@ -25,6 +35,7 @@
         <depends name="kupu" />
     </genericsetup:importStep>
 
+    <!-- upgrades -->
     <genericsetup:upgradeStep
         title="Upgrade collective.prettysociable"
         description="Removes wrong styles from kupu styles menu"
@@ -40,7 +51,7 @@
         description="Empty upgrade step"
         source="0.2"
         destination="0.3"
-        handler=".migration.emptyMigrate"
+        handler=".migration.migrateTo03"
         sortkey="2"
         profile="collective.prettysociable:default"
     />  
