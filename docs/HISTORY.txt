@@ -1,6 +1,12 @@
 Changelog
 =========
 
+0.3.1 (2011-04-17)
+------------------
+- Fixed hover image for large headings.
+  [tmassman]
+
+
 0.3 (2010-05-20)
 ----------------
 
